@@ -2,11 +2,11 @@
     "name": "Player Input Actions",
     "maps": [
         {
-            "name": "Movement",
+            "name": "General",
             "id": "a7535e33-abcd-4a03-b35e-980e5cf86616",
             "actions": [
                 {
-                    "name": "Walk",
+                    "name": "Movement",
                     "type": "Value",
                     "id": "deb6d5c7-4d4f-4e6b-ac01-c403a10e3916",
                     "expectedControlType": "Vector2",
@@ -23,7 +23,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Walk",
+                    "action": "Movement",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -34,7 +34,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "Walk",
+                    "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -45,7 +45,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "Walk",
+                    "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -56,7 +56,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "Walk",
+                    "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -67,7 +67,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "Walk",
+                    "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 }
