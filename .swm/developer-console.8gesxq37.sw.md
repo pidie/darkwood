@@ -9,11 +9,7 @@ app_version: 1.18.4
 
 The Developer Console is controlled by a suite of scripts that allow developers and testers to manipulate internal variables during runtime. It is comprised of three key elements - Commands, Command Compiling, and Command Interface.
 
-<br/>
-
 * * *
-
-<br/>
 
 ## Commands
 
@@ -50,11 +46,7 @@ All command logic is stored in the `CommandLogic`<swm-token data-swm-token=":Ass
 
 *   For changing variables related to backend processes, use kebab case.
 
-    <br/>
-
 * * *
-
-<br/>
 
 ## Command Compiling
 
@@ -73,11 +65,7 @@ Processing a command from text.
 
 The Developer Console is a standalone class instantiated by the `DevConsoleController`<swm-token data-swm-token=":Assets/Scripts/Utilities/Console/DevConsoleController.cs:10:5:5:`    public class DevConsoleController : Singleton&lt;DevConsoleController&gt;`"/>. The controller, which exists on a GameObject in the scene, passes string input from the user to the console itself, which then parses it into a command and a set of arguments. The console then calls the `Process`<swm-token data-swm-token=":Assets/Scripts/Utilities/Console/Commands/Command.cs:9:7:7:`        public override bool Process(string[] args)`"/> command, triggering the assigned event to fire.
 
-<br/>
-
 * * *
-
-<br/>
 
 ## Command Interface
 
