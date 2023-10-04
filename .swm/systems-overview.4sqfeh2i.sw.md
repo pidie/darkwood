@@ -2,10 +2,14 @@
 id: 4sqfeh2i
 title: Systems Overview
 file_version: 1.1.3
-app_version: 1.18.4
+app_version: 1.18.7
 ---
 
 *   **Console System** - Controls the Developer Console within the game. ([Developer Console](developer-console.8gesxq37.sw.md))
+
+*   **Input System** - Organizes and relays player input to other systems for processing.
+
+*   **Inventory System** - Manages all items in the game that can be placed in the player's inventory.
 
 <br/>
 
