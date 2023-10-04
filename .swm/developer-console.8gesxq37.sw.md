@@ -2,7 +2,7 @@
 id: 8gesxq37
 title: Developer Console
 file_version: 1.1.3
-app_version: 1.18.4
+app_version: 1.18.7
 ---
 
 # Overview
@@ -87,6 +87,26 @@ Adding a log to the console.
 <br/>
 
 The console would not be complete without having returned values. The `AddLog`<swm-token data-swm-token=":Assets/Scripts/Utilities/Console/ConsoleLog.cs:15:5:5:`        public void AddLog(IEnumerable&lt;string&gt; logs)`"/> function allows the commands and the compiler to add log entries, giving the user relevant data about the processes they run.
+
+<br/>
+
+* * *
+
+# Assemblies
+
+## Darkwood.Utilities.Console
+
+Manages the root folder structure of the Console and related scripts.
+
+### Dependencies
+
+*   Darkwood.Core
+
+## Darkwood.Utilities.Console.Command
+
+Manages the root commands folder, where the command logic is stored. Made separate due to dependency requirements.
+
+### Dependencies
 
 <br/>
 
