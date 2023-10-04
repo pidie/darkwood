@@ -12,7 +12,7 @@ namespace Inventory
         public PlayerWallet silverCoinWallet;
         public PlayerWallet gemstoneWallet;
 
-        public void Awake()
+        public void OnAwake()
         {
             inventory.ClearInventory();
             silverCoinWallet.ClearWallet();
