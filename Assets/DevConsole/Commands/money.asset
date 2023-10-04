@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f4a4ecfe604bc1936d9729b2abb4e0, type: 3}
+  m_Name: money
+  m_EditorClassIdentifier: 
+  commandWord: money
+  commandWords:
+  - money
+  printOnHelp: 0
+  printConfirmationToLog: 1
+  arguments: '{amount} | {"="} {amount}'
+  description: Gives the player {amount} silver coins
+  notes: 'money {qty}
+
+
+    sets the player''s silver coin amount to qty'
+  functionField:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2239084937241293552, guid: e7ef1870d2c68a944ab908d055fb51ff,
+          type: 3}
+        m_TargetAssemblyTypeName: Utilities.Console.Commands.CommandLogic, Assembly-CSharp
+        m_MethodName: AddMoney
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

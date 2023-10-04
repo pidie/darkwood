@@ -1,0 +1,17 @@
+{
+    "name": "Darkwood.UI",
+    "rootNamespace": "",
+    "references": [
+        "GUID:7c60107bcad1c4d4fadceb59735d6c5c",
+        "GUID:2ad38f9e366d3894da5f6c13618c04fc"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

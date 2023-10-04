@@ -15,8 +15,8 @@ MonoBehaviour:
   useDistance: 1
   distanceGradient:
     serializedVersion: 2
-    key0: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 1}
-    key1: {r: 0.99056625, g: 0, b: 1, a: 0.8117647}
+    key0: {r: 0.122641504, g: 0.49056602, b: 0.13713337, a: 0.03529412}
+    key1: {r: 0.8945616, g: 1, b: 0.8820755, a: 1}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
@@ -44,15 +44,15 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   near: 0
-  far: 100
-  distanceFogIntensity: 0.276
-  useHeight: 0
+  far: 250
+  distanceFogIntensity: 1
+  useHeight: 1
   heightGradient:
     serializedVersion: 2
-    key0: {r: 1, g: 1, b: 1, a: 1}
-    key1: {r: 1, g: 1, b: 1, a: 1}
-    key2: {r: 0, g: 0, b: 0, a: 0}
-    key3: {r: 0, g: 0, b: 0, a: 0}
+    key0: {r: 0.7830189, g: 0.7830189, b: 0.7830189, a: 1}
+    key1: {r: 0.7735849, g: 0.7735849, b: 0.7735849, a: 0.20784314}
+    key2: {r: 0, g: 0, b: 0, a: 0.2901961}
+    key3: {r: 0, g: 0, b: 0, a: 1}
     key4: {r: 0, g: 0, b: 0, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
@@ -66,9 +66,9 @@ MonoBehaviour:
     ctime6: 0
     ctime7: 0
     atime0: 0
-    atime1: 65535
-    atime2: 0
-    atime3: 0
+    atime1: 13493
+    atime2: 41441
+    atime3: 65535
     atime4: 0
     atime5: 0
     atime6: 0
@@ -76,11 +76,11 @@ MonoBehaviour:
     m_Mode: 0
     m_ColorSpace: -1
     m_NumColorKeys: 2
-    m_NumAlphaKeys: 2
+    m_NumAlphaKeys: 4
   low: 0
   high: 10
-  heightFogIntensity: 1
-  cameraRelativePosition: 0
-  distanceHeightBlend: 0.5
+  heightFogIntensity: 0.546
+  cameraRelativePosition: 1
+  distanceHeightBlend: 0.181
   renderEvent: 550
   applyInSceneView: 0

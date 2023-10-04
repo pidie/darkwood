@@ -1,0 +1,18 @@
+{
+    "name": "Darkwood.Utilities.Console.Commands",
+    "rootNamespace": "",
+    "references": [
+        "GUID:68b8467fbd936c4478862c11b3337f4a",
+        "GUID:2ad38f9e366d3894da5f6c13618c04fc",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

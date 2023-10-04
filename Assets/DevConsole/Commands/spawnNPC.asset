@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f4a4ecfe604bc1936d9729b2abb4e0, type: 3}
+  m_Name: spawnNPC
+  m_EditorClassIdentifier: 
+  commandWord: spawnNPC
+  functionField:
+    m_PersistentCalls:
+      m_Calls: []
+  notes: 'spawnNPC {target: char_ID} {qty = 1} {destination: worldX, worldY, worldZ
+    = transform.position}
+
+    spawnNPC {target: char_ID} {qty = 1} {destination:
+    destination_ID = transform.position}
+
+
+    Spawns qty copies of target character
+    at destination. Will check for collisions before spawning, so target my not appear
+    exactly where intended.'
