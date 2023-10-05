@@ -2,7 +2,7 @@
 id: 9x3kjr34
 title: Physics System
 file_version: 1.1.3
-app_version: 1.18.7
+app_version: 1.18.8
 ---
 
 # TODO
@@ -37,9 +37,9 @@ The Physics Manager is pretty simple, but very effective.
 <!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
 ### 📄 Assets/Scripts/Physics_/PhysicsManager.cs
 ```c#
-7              public static Action OnApplyGravitationalForce;
-8      
-9              private void FixedUpdate() => OnApplyGravitationalForce.Invoke();
+15             // public static Action OnApplyGravitationalForce;
+16     
+17             // private void FixedUpdate() => OnApplyGravitationalForce?.Invoke();
 ```
 
 <br/>
@@ -74,7 +74,7 @@ It's important to know when to stop applying gravity to a game object.
 
 # The Right Tool For the Job
 
-Creating tools that utilize custom physics is super easy. To access the physics system, a script only needs to subscribe to the `OnApplyGravitationalForce`<swm-token data-swm-token=":Assets/Scripts/Physics_/PhysicsManager.cs:7:7:7:`        public static Action OnApplyGravitationalForce;`"/> action. From there, it's as simple as defining the behavior associated with the subscription.
+Creating tools that utilize custom physics is super easy. To access the physics system, a script only needs to subscribe to the `OnApplyGravitationalForce`<swm-token data-swm-token=":Assets/Scripts/Physics_/PhysicsManager.cs:15:9:9:`        // public static Action OnApplyGravitationalForce;`"/> action. From there, it's as simple as defining the behavior associated with the subscription.
 
 <br/>
 
