@@ -7,13 +7,13 @@ app_version: 1.18.8
 
 # TODO
 
-*   Create and implement the IPhysicsInteractable interface
+*   Create and implement the `IPhysicsInteractable`<swm-token data-swm-token=":Assets/Scripts/Physics_/IPhysicsInteractable.cs:1:4:4:`public interface IPhysicsInteractable`"/> interface
 
     *   Scripts that use physics will implement this instead of using a cookie cutter `PhysicsController`<swm-token data-swm-token=":Assets/Scripts/Physics_/PhysicsController.cs:6:5:5:`    public class PhysicsController : MonoBehaviour`"/>
 
     *   Retire the `PhysicsController`<swm-token data-swm-token=":Assets/Scripts/Physics_/PhysicsController.cs:6:5:5:`    public class PhysicsController : MonoBehaviour`"/> script
 
-    *   Create a default implementation of IPhysicsInteractable to replace PhysicsController
+    *   Create a default implementation of `IPhysicsInteractable`<swm-token data-swm-token=":Assets/Scripts/Physics_/IPhysicsInteractable.cs:1:4:4:`public interface IPhysicsInteractable`"/> to replace PhysicsController
 
     *   Potentially create modular physics behaviors and a drag-and-drop system within the inspector to control how the object behaves in real-time via scriptable objects
 
