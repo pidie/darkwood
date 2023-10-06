@@ -37,9 +37,9 @@ The Physics Manager is pretty simple, but very effective.
 <!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
 ### 📄 Assets/Scripts/Physics_/PhysicsManager.cs
 ```c#
-15             // public static Action OnApplyGravitationalForce;
-16     
-17             // private void FixedUpdate() => OnApplyGravitationalForce?.Invoke();
+11             public Action OnApplyPhysics;
+12     
+13             private void FixedUpdate() => OnApplyPhysics?.Invoke();
 ```
 
 <br/>
