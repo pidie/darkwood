@@ -1,4 +1,5 @@
 using System;
+using UnityEngine;
 
 namespace Physics_
 {
@@ -6,14 +7,10 @@ namespace Physics_
     {
         [SerializeField] private float gravity = 9.81f;
     
-        public float Gravity { get; } => gravity;
+        public float Gravity => gravity;
 
         public Action OnApplyPhysics;
 
         private void FixedUpdate() => OnApplyPhysics?.Invoke();
-
-        // public static Action OnApplyGravitationalForce;
-
-        // private void FixedUpdate() => OnApplyGravitationalForce?.Invoke();
     }
 }

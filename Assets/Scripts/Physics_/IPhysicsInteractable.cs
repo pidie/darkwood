@@ -1,4 +1,7 @@
-public interface IPhysicsInteractable
+namespace Physics_
 {
-    private bool PhysicsBehavior();
+    public interface IPhysicsInteractable
+    {
+        private bool PhysicsBehavior() { return false; }
+    }
 }

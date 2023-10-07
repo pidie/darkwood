@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -21,6 +22,6 @@ namespace Utilities.Console
         public string Description => description;
         public UnityEvent<string[]> function => functionField;
 
-        public abstract bool Process(string[] args);
+        public abstract bool Process([ItemCanBeNull] string[] args);
     }
 }

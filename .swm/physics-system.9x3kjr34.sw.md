@@ -7,13 +7,13 @@ app_version: 1.18.8
 
 # TODO
 
-*   Create and implement the `IPhysicsInteractable`<swm-token data-swm-token=":Assets/Scripts/Physics_/IPhysicsInteractable.cs:1:4:4:`public interface IPhysicsInteractable`"/> interface
+*   Create and implement the `IPhysicsInteractable`<swm-token data-swm-token=":Assets/Scripts/Physics_/IPhysicsInteractable.cs:3:5:5:`    public interface IPhysicsInteractable`"/> interface
 
     *   Scripts that use physics will implement this instead of using a cookie cutter `PhysicsController`<swm-token data-swm-token=":Assets/Scripts/Physics_/PhysicsController.cs:6:5:5:`    public class PhysicsController : MonoBehaviour`"/>
 
     *   Retire the `PhysicsController`<swm-token data-swm-token=":Assets/Scripts/Physics_/PhysicsController.cs:6:5:5:`    public class PhysicsController : MonoBehaviour`"/> script
 
-    *   Create a default implementation of `IPhysicsInteractable`<swm-token data-swm-token=":Assets/Scripts/Physics_/IPhysicsInteractable.cs:1:4:4:`public interface IPhysicsInteractable`"/> to replace PhysicsController
+    *   Create a default implementation of `IPhysicsInteractable`<swm-token data-swm-token=":Assets/Scripts/Physics_/IPhysicsInteractable.cs:3:5:5:`    public interface IPhysicsInteractable`"/> to replace PhysicsController
 
     *   Potentially create modular physics behaviors and a drag-and-drop system within the inspector to control how the object behaves in real-time via scriptable objects
 
@@ -48,11 +48,9 @@ Each object that interacts with physics has a physics controller component that 
 <!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
 ### 📄 Assets/Scripts/Physics_/PhysicsController.cs
 ```c#
-25             private void OnEnable() => PhysicsManager.OnApplyGravitationalForce += ApplyGravitationalForce;
-26     
-27             private void OnDisable() => PhysicsManager.OnApplyGravitationalForce -= ApplyGravitationalForce;
-28     
-29             private void ApplyGravitationalForce()
+25             // private void OnEnable() => PhysicsManager.OnApplyGravitationalForce += ApplyGravitationalForce;
+26             //
+27             // private void OnDisable() => PhysicsManager.OnApplyGravitationalForce -= ApplyGravitationalForce;
 ```
 
 <br/>
@@ -74,7 +72,7 @@ It's important to know when to stop applying gravity to a game object.
 
 # The Right Tool For the Job
 
-Creating tools that utilize custom physics is super easy. To access the physics system, a script only needs to subscribe to the `OnApplyGravitationalForce`<swm-token data-swm-token=":Assets/Scripts/Physics_/PhysicsManager.cs:15:9:9:`        // public static Action OnApplyGravitationalForce;`"/> action. From there, it's as simple as defining the behavior associated with the subscription.
+Creating tools that utilize custom physics is super easy. To access the physics system, a script only needs to subscribe to the `OnApplyPhysics`<swm-token data-swm-token=":Assets/Scripts/Physics_/PhysicsManager.cs:12:5:5:`        public Action OnApplyPhysics;`"/> action. From there, it's as simple as defining the behavior associated with the subscription.
 
 <br/>
 
