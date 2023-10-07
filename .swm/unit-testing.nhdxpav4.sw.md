@@ -21,13 +21,13 @@ Each test name should have four sections:
 
 *   Basic description of the test
 
-*   Expected result of the test
+*   Expected result of the test as an assertion
 
 Each section of the test should be written using Pascal case. Each section should be separated by an underscore character.
 
 e.g.: MyScript\_MyMethod\_AddTwoValues\_AddedValuesYieldSum
 
-<br/>
+e.g.; `CommandLogic_AddMoney_ModifyValueFromString_WalletValuePlusEqualsValue`<swm-token data-swm-token=":Assets/Unit Tests/EditMode/CommandLogic_AddMoney_ModifyValueFromString_WalletValuePlusEqualsValue.cs:4:4:4:`public class CommandLogic_AddMoney_ModifyValueFromString_WalletValuePlusEqualsValue`"/>
 
 * * *
 
@@ -40,8 +40,6 @@ When a unit checkpoint is reached, all tests on that checkpoint should be run - 
 When a unit is completed, all tests on that unit should be tested.
 
 At regular intervals, a global test of the project should be completed.
-
-<br/>
 
 <br/>
 
