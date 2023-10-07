@@ -7,19 +7,19 @@ app_version: 1.18.8
 
 # TODO
 
-*   Create and implement the `IPhysicsInteractable`<swm-token data-swm-token=":Assets/Scripts/Physics_/IPhysicsInteractable.cs:3:5:5:`    public interface IPhysicsInteractable`"/> interface
+Create and implement the `IPhysicsInteractable`<swm-token data-swm-token=":Assets/Scripts/Physics_/IPhysicsInteractable.cs:3:5:5:`    public interface IPhysicsInteractable`"/> interface
 
-    *   Scripts that use physics will implement this instead of using a cookie cutter `PhysicsController`<swm-token data-swm-token=":Assets/Scripts/Physics_/PhysicsController.cs:6:5:5:`    public class PhysicsController : MonoBehaviour`"/>
+*   Scripts that use physics will implement this instead of using a cookie cutter `PhysicsController`<swm-token data-swm-token=":Assets/Scripts/Physics_/PhysicsController.cs:6:5:5:`    public class PhysicsController : MonoBehaviour`"/>
 
-    *   Retire the `PhysicsController`<swm-token data-swm-token=":Assets/Scripts/Physics_/PhysicsController.cs:6:5:5:`    public class PhysicsController : MonoBehaviour`"/> script
+*   Retire the `PhysicsController`<swm-token data-swm-token=":Assets/Scripts/Physics_/PhysicsController.cs:6:5:5:`    public class PhysicsController : MonoBehaviour`"/> script
 
-    *   Create a default implementation of `IPhysicsInteractable`<swm-token data-swm-token=":Assets/Scripts/Physics_/IPhysicsInteractable.cs:3:5:5:`    public interface IPhysicsInteractable`"/> to replace PhysicsController
+*   Create a default implementation of `IPhysicsInteractable`<swm-token data-swm-token=":Assets/Scripts/Physics_/IPhysicsInteractable.cs:3:5:5:`    public interface IPhysicsInteractable`"/> to replace PhysicsController
 
-    *   Potentially create modular physics behaviors and a drag-and-drop system within the inspector to control how the object behaves in real-time via scriptable objects
+*   Potentially create modular physics behaviors and a drag-and-drop system within the inspector to control how the object behaves in real-time via scriptable objects
 
-*   Define a global constant for gravity to be cached in the physics manager on Awake
+Define a global constant for gravity to be cached in the physics manager on Awake
 
-    *   Have physics objects inherit gravity from the physics manager
+*   Have physics objects inherit gravity from the physics manager
 
 * * *
 
@@ -33,7 +33,7 @@ The Physics System is a suite of scripts that create and manage artificial gravi
 
 <br/>
 
-The Physics Manager is pretty simple, but very effective.
+The physics manager is pretty simple, but very effective.
 <!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
 ### 📄 Assets/Scripts/Physics_/PhysicsManager.cs
 ```c#
@@ -44,18 +44,34 @@ The Physics Manager is pretty simple, but very effective.
 
 <br/>
 
-Each object that interacts with physics has a physics controller component that tells it how to behave with gravity.
+Each object that interacts with physics has a component that is registered to the physics manager.
 <!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
-### 📄 Assets/Scripts/Physics_/PhysicsController.cs
+### 📄 Assets/Scripts/Physics_/PhysicsInteractable.cs
 ```c#
-25             // private void OnEnable() => PhysicsManager.OnApplyGravitationalForce += ApplyGravitationalForce;
-26             //
-27             // private void OnDisable() => PhysicsManager.OnApplyGravitationalForce -= ApplyGravitationalForce;
+17             private void OnEnable() => PhysicsManager.Instance.OnApplyPhysics += PhysicsBehavior;
+18     
+19             private void OnDisable() => PhysicsManager.Instance.OnApplyPhysics -= PhysicsBehavior;
+20     
+21             private void PhysicsBehavior()
 ```
 
 <br/>
 
-It's important to know when to stop applying gravity to a game object.
+* * *
+
+# The Right Tool For the Job
+
+Creating tools that utilize custom physics is super easy. To access the physics system, a script only needs to subscribe to the `OnApplyPhysics`<swm-token data-swm-token=":Assets/Scripts/Physics_/PhysicsManager.cs:12:5:5:`        public Action OnApplyPhysics;`"/> action. From there, it's as simple as defining the behavior associated with the subscription.
+
+<br/>
+
+## Ground Check
+
+Each physics interactable is required to have a `GroundCheck`<swm-token data-swm-token=":Assets/Scripts/Physics_/GroundCheck.cs:5:5:5:`    public class GroundCheck : MonoBehaviour`"/> component. This component reports to the object whether or not it is grounded by checking if it is within a specified distance of the ground's collider.
+
+<br/>
+
+The ground check at work
 <!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
 ### 📄 Assets/Scripts/Physics_/GroundCheck.cs
 ```c#
@@ -66,13 +82,23 @@ It's important to know when to stop applying gravity to a game object.
 
 <br/>
 
-<br/>
+## Conditions
 
-* * *
+Each physics object can respond to a variety of dynamic situations. The system is set up so that each response can be tailored to the object in question and modified easily.
 
-# The Right Tool For the Job
+Each physics object will have a default profile set up so they can function out of the box. The default behavior will mimic a solid object, such as a rock.
 
-Creating tools that utilize custom physics is super easy. To access the physics system, a script only needs to subscribe to the `OnApplyPhysics`<swm-token data-swm-token=":Assets/Scripts/Physics_/PhysicsManager.cs:12:5:5:`        public Action OnApplyPhysics;`"/> action. From there, it's as simple as defining the behavior associated with the subscription.
+### Falling
+
+### Underwater
+
+### Impact
+
+### Wind Force
+
+### Water Floating
+
+### Resting
 
 <br/>
 
