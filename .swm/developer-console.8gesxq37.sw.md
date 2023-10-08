@@ -2,7 +2,7 @@
 id: 8gesxq37
 title: Developer Console
 file_version: 1.1.3
-app_version: 1.18.7
+app_version: 1.18.8
 ---
 
 # Overview
@@ -88,25 +88,31 @@ Adding a log to the console.
 
 The console would not be complete without having returned values. The `AddLog`<swm-token data-swm-token=":Assets/Scripts/Utilities/Console/ConsoleLog.cs:15:5:5:`        public void AddLog(IEnumerable&lt;string&gt; logs)`"/> function allows the commands and the compiler to add log entries, giving the user relevant data about the processes they run.
 
-<br/>
-
 * * *
 
 # Assemblies
 
-## Darkwood.Utilities.Console
+As the project grows in complexity, it's going to be important to add assemblies. Currently, only the `Darkwood.Core` assembly exists in the project and is used as a reference for the testing scripts. The console system will likely have its own assembly or assemblies; those should be listed here, along with what they contain and what dependencies they reference.
 
-Manages the root folder structure of the Console and related scripts.
+## `Darkwood.SampleAssembly`
+
+A non-existent sample assembly for documentation purposes that shows how this section should be formatted.
+
+### Dependencies
+
+*   `Darkwood.Core`
+
+*   `Darkwood.SomeOtherAssembly`
+
+*   `UnityEngine.Input`
+
+## `Darkwood.SomeOtherAssembly`
+
+Yet another non-existent assembly that serves the same purpose as `Darkwood.SampleAssembly`, but with maybe slightly more pizzazz. There's no necessary reason for such pizzazz - it's just because I said so, and also so that I can include the word "pizzazz" thrice in this article.
 
 ### Dependencies
 
-*   Darkwood.Core
-
-## Darkwood.Utilities.Console.Command
-
-Manages the root commands folder, where the command logic is stored. Made separate due to dependency requirements.
-
-### Dependencies
+*   `Darkwood.Core`
 
 <br/>
 
