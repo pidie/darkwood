@@ -88,11 +88,19 @@ Adding a log to the console.
 
 The console would not be complete without having returned values. The `AddLog`<swm-token data-swm-token=":Assets/Scripts/Utilities/Console/ConsoleLog.cs:15:5:5:`        public void AddLog(IEnumerable&lt;string&gt; logs)`"/> function allows the commands and the compiler to add log entries, giving the user relevant data about the processes they run.
 
+<br/>
+
+* * *
+
 * * *
 
 # Assemblies
 
 As the project grows in complexity, it's going to be important to add assemblies. Currently, only the `Darkwood.Core` assembly exists in the project and is used as a reference for the testing scripts. The console system will likely have its own assembly or assemblies; those should be listed here, along with what they contain and what dependencies they reference.
+
+<br/>
+
+* * *
 
 ## `Darkwood.SampleAssembly`
 
@@ -105,6 +113,8 @@ A non-existent sample assembly for documentation purposes that shows how this se
 *   `Darkwood.SomeOtherAssembly`
 
 *   `UnityEngine.Input`
+
+* * *
 
 ## `Darkwood.SomeOtherAssembly`
 
