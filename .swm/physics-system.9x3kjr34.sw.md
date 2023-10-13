@@ -37,9 +37,9 @@ The physics manager is pretty simple, but very effective.
 <!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
 ### 📄 Assets/Scripts/Physics_/PhysicsManager.cs
 ```c#
-11             public Action OnApplyPhysics;
-12     
-13             private void FixedUpdate() => OnApplyPhysics?.Invoke();
+13             public Action OnApplyPhysics;
+14             
+15             private void FixedUpdate() => OnApplyPhysics?.Invoke();
 ```
 
 <br/>
@@ -48,11 +48,21 @@ Each object that interacts with physics has a component that is registered to th
 <!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
 ### 📄 Assets/Scripts/Physics_/PhysicsInteractable.cs
 ```c#
-17             private void OnEnable() => PhysicsManager.Instance.OnApplyPhysics += PhysicsBehavior;
-18     
-19             private void OnDisable() => PhysicsManager.Instance.OnApplyPhysics -= PhysicsBehavior;
-20     
-21             private void PhysicsBehavior()
+28             private void OnEnable()
+29             {
+30                 PhysicsManager.Instance.OnApplyPhysics += PhysicsBehavior;
+31                 #if UNITY_EDITOR
+32                 VerifyHasGroundCheck();
+33                 #endif
+34             }
+35     
+36             private void OnDisable() => PhysicsManager.Instance.OnApplyPhysics -= PhysicsBehavior;
+37     
+38             private void PhysicsBehavior()
+39             {
+40                 // as conditional behaviors are added, check for conditions before invoking methods
+41                 standardBehavior.StandardBehavior?.Invoke(this, standardBehavior);
+42             }
 ```
 
 <br/>
@@ -61,9 +71,7 @@ Each object that interacts with physics has a component that is registered to th
 
 # The Right Tool For the Job
 
-Creating tools that utilize custom physics is super easy. To access the physics system, a script only needs to subscribe to the `OnApplyPhysics`<swm-token data-swm-token=":Assets/Scripts/Physics_/PhysicsManager.cs:12:5:5:`        public Action OnApplyPhysics;`"/> action. From there, it's as simple as defining the behavior associated with the subscription.
-
-<br/>
+Creating tools that utilize custom physics is super easy. To access the physics system, a script only needs to subscribe to the `OnApplyPhysics`<swm-token data-swm-token=":Assets/Scripts/Physics_/PhysicsManager.cs:13:5:5:`        public Action OnApplyPhysics;`"/> action. From there, it's as simple as defining the behavior associated with the subscription.
 
 ## Ground Check
 
