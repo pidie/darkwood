@@ -12,5 +12,6 @@ namespace Utilities
         public const string ui_PLAYER_UI = "Player UI";
 
         public const float TICK_TIME = 0.05f;
+        public const float GRAVITY = -9.81f;
     }
 }

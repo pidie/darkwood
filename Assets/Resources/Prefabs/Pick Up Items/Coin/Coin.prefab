@@ -152,13 +152,13 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7815836335303475969, guid: b794716070cd92d41b91ea7460584e57,
           type: 3}
-        m_TargetAssemblyTypeName: Inventory.PlayerInventoryController, Assembly-CSharp
+        m_TargetAssemblyTypeName: Inventory.PlayerInventoryController, Darkwood.Core
         m_MethodName: AddCurrency
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: 241d0c63d73445242843390ce7414ded,
             type: 2}
-          m_ObjectArgumentAssemblyTypeName: Inventory.CurrencyObjectData, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: Inventory.InventoryObjectData, Darkwood.Core
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -177,6 +177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 241d0c63d73445242843390ce7414ded, type: 2}
+  overrideInstanceID: 
 --- !u!135 &4805815965311259213
 SphereCollider:
   m_ObjectHideFlags: 0

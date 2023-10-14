@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Inventory
 {
-    [CreateAssetMenu(menuName = "Inventory/Object Data")]
+    [CreateAssetMenu(menuName = "Darkwood/Inventory/Object Data")]
     public class InventoryObjectData : ScriptableObject
     {
         [Tooltip("The name for the object that the player sees")]

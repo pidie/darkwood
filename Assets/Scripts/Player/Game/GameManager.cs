@@ -26,6 +26,7 @@ public class GameManager : Singleton<GameManager>
     {
         base.Awake();
         GameSettings.SetUpSettingsDictionaries();
+        Application.targetFrameRate = 120;
     }
 
     private void Start()

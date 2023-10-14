@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Utilities.Console.Commands
 {
-    [CreateAssetMenu(menuName = "Developer/New Console Command", fileName = "New Console Command")]
+    [CreateAssetMenu(menuName = "Darkwood/Developer/New Console Command", fileName = "New Console Command")]
     public class Command : ConsoleCommand
     {
         public override bool Process(string[] args)

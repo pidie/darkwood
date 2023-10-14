@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Inventory
 {
-    [CreateAssetMenu(menuName = "Player/Inventory/Wallet")]
+    [CreateAssetMenu(menuName = "Darkwood/Player/Inventory/Wallet")]
     public class PlayerWallet : ScriptableObject
     {
         [SerializeField] private int maxValue = 99999;

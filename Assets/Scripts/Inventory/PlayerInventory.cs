@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Inventory
 {
-    [CreateAssetMenu(menuName = "Player/Inventory/Main Inventory")]
+    [CreateAssetMenu(menuName = "Darkwood/Player/Inventory/Main Inventory")]
     public class PlayerInventory : ScriptableObject
     {
         private List<InventoryStorageObject> _inventoryStorageObjects = new ();
