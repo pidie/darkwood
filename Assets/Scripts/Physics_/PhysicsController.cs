@@ -22,9 +22,9 @@ namespace Physics_
 
         private void Awake() => _characterController = GetComponent<CharacterController>();
 
-        // private void OnEnable() => PhysicsManager.OnApplyGravitationalForce += ApplyGravitationalForce;
-        //
-        // private void OnDisable() => PhysicsManager.OnApplyGravitationalForce -= ApplyGravitationalForce;
+        private void OnEnable() => PhysicsManager.Instance.OnApplyPhysics += ApplyGravitationalForce;
+        
+        private void OnDisable() => PhysicsManager.Instance.OnApplyPhysics -= ApplyGravitationalForce;
 
         private void ApplyGravitationalForce()
         {
