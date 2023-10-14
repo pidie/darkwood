@@ -143,6 +143,15 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Basic Attack"",
+                    ""type"": ""Button"",
+                    ""id"": ""1bc103c4-d8cd-421b-835b-65665ffdad5d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -519,6 +528,28 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""Toggle Console"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""583bdc3b-99ff-462a-a26a-173057e69d6a"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard_default;Keyboard_southpaw"",
+                    ""action"": ""Basic Attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d9f20d0c-4e5e-4413-8b05-42566bf761ef"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Basic Attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -827,6 +858,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         m_General_CharacterSheet = m_General.FindAction("Character Sheet", throwIfNotFound: true);
         m_General_Map = m_General.FindAction("Map", throwIfNotFound: true);
         m_General_ToggleConsole = m_General.FindAction("Toggle Console", throwIfNotFound: true);
+        m_General_BasicAttack = m_General.FindAction("Basic Attack", throwIfNotFound: true);
         // Menu
         m_Menu = asset.FindActionMap("Menu", throwIfNotFound: true);
         m_Menu_ChangeSelection = m_Menu.FindAction("ChangeSelection", throwIfNotFound: true);
@@ -913,6 +945,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_General_CharacterSheet;
     private readonly InputAction m_General_Map;
     private readonly InputAction m_General_ToggleConsole;
+    private readonly InputAction m_General_BasicAttack;
     public struct GeneralActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -930,6 +963,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         public InputAction @CharacterSheet => m_Wrapper.m_General_CharacterSheet;
         public InputAction @Map => m_Wrapper.m_General_Map;
         public InputAction @ToggleConsole => m_Wrapper.m_General_ToggleConsole;
+        public InputAction @BasicAttack => m_Wrapper.m_General_BasicAttack;
         public InputActionMap Get() { return m_Wrapper.m_General; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -978,6 +1012,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @ToggleConsole.started += instance.OnToggleConsole;
             @ToggleConsole.performed += instance.OnToggleConsole;
             @ToggleConsole.canceled += instance.OnToggleConsole;
+            @BasicAttack.started += instance.OnBasicAttack;
+            @BasicAttack.performed += instance.OnBasicAttack;
+            @BasicAttack.canceled += instance.OnBasicAttack;
         }
 
         private void UnregisterCallbacks(IGeneralActions instance)
@@ -1021,6 +1058,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @ToggleConsole.started -= instance.OnToggleConsole;
             @ToggleConsole.performed -= instance.OnToggleConsole;
             @ToggleConsole.canceled -= instance.OnToggleConsole;
+            @BasicAttack.started -= instance.OnBasicAttack;
+            @BasicAttack.performed -= instance.OnBasicAttack;
+            @BasicAttack.canceled -= instance.OnBasicAttack;
         }
 
         public void RemoveCallbacks(IGeneralActions instance)
@@ -1220,6 +1260,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         void OnCharacterSheet(InputAction.CallbackContext context);
         void OnMap(InputAction.CallbackContext context);
         void OnToggleConsole(InputAction.CallbackContext context);
+        void OnBasicAttack(InputAction.CallbackContext context);
     }
     public interface IMenuActions
     {

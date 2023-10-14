@@ -121,6 +121,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Basic Attack",
+                    "type": "Button",
+                    "id": "1bc103c4-d8cd-421b-835b-65665ffdad5d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -495,6 +504,28 @@
                     "processors": "",
                     "groups": "Keyboard_default;Keyboard_southpaw",
                     "action": "Toggle Console",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "583bdc3b-99ff-462a-a26a-173057e69d6a",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard_default;Keyboard_southpaw",
+                    "action": "Basic Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d9f20d0c-4e5e-4413-8b05-42566bf761ef",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Basic Attack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
